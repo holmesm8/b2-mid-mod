@@ -1,6 +1,7 @@
-<% @studios.each do |studio| %>
+<h1>Studio Index</h1>
+<p><% @studios.each do |studio| %></p>
   <p><%= studio.name %></p>
   <% studio.movies.each do |movie| %>
     <p><%= movie.name %></p>
   <% end %>
-<% end %>
+<p><% end %><p>
