@@ -8,6 +8,6 @@ RSpec.describe Actor, type: :model do
 
   describe 'relationships' do
     it {should have_many :actormovies}
-    it {should have_many(:movies).through:actormovies}
+    it {should have_many(:movies).through(:actormovies)}
   end
 end
