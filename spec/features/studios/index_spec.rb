@@ -8,11 +8,13 @@ RSpec.describe "studios index page", type: :feature do
 
       movie1 = studio1.movies.create!(name: "Iron Man", creation_year: "2006", genre: "Superhero")
       movie2 = studio2.movies.create!(name: "Spiderman", creation_year: "2017", genre: "Superhero")
+      movie3 = studio1.movies.create!(name: "Toy Story", creation_year: "1994", genre: "Animated")
 
       visit '/studios'
 
       expect(page).to have_content("#{studio1.name}")
       expect(page).to have_content("#{movie1.name}")
+      expect(page).to have_content("#{movie3.name}")
       expect(page).to have_content("#{studio2.name}")
       expect(page).to have_content("#{movie2.name}")
     end
