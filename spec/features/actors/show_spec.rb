@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe "studios index page", type: :feature do
   context "as a visitor" do
     it "can see all studios with the names of their movies listed" do
+      studio1 = Studio.create!(name: "Disney")
+
       actor1 = Actor.create!(name: "Matt Holmes", age: "30")
       actor2 = Actor.create!(name: "Zeke Clark", age: "25")
 
