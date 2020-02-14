@@ -1,4 +1,4 @@
-class Actormovies <ApplicationRecord
+class Actormovie <ApplicationRecord
   belongs_to :actor
   belongs_to :movie
 end
