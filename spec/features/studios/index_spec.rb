@@ -6,9 +6,8 @@ RSpec.describe "studios index page", type: :feature do
       studio1 = Studio.create!(name: "Disney")
       studio2 = Studio.create!(name: "Sony")
 
-      movie1 = studio1.movies.create!(name: "Iron Man")
-      movie2 = studio2.movies.create!(name: "Spiderman")
-
+      movie1 = studio1.movies.create!(name: "Iron Man", creation_year: "2006", genre: "Superhero")
+      movie2 = studio2.movies.create!(name: "Spiderman", creation_year: "2017", genre: "Superhero")
 
       visit '/studios'
 
