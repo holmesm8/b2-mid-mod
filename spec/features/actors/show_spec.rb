@@ -7,8 +7,8 @@ RSpec.describe "actors show page", type: :feature do
       @movie1 = @studio1.movies.create!(name: "Iron Man", creation_year: "2006", genre: "Superhero")
       @movie2 = @studio1.movies.create!(name: "Spiderman", creation_year: "2017", genre: "Superhero")
 
-      @actor1 = @movie1.actors.create!(name: "Matt Holmes", age: "30")
-      @actor2 = @movie1.actors.create!(name: "Zeke Clark", age: "26")
+      @actor1 = @movie1.actors.create!(name: "Matt Holmes", age: 30)
+      @actor2 = @movie1.actors.create!(name: "Zeke Clark", age: 26)
     end
 
     it "can see all studios with the names of their movies listed" do
