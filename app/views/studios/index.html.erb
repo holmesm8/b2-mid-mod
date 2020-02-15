@@ -1,7 +1,9 @@
 <h1>Studio Index</h1>
 <p><% @studios.each do |studio| %></p>
+  <section id="studio-<%= studio.id %>">"
   <p><%= studio.name %></p>
-  <% studio.movies.each do |movie| %>
+    <% studio.movies.each do |movie| %>
     <p><%= movie.name %></p>
   <% end %>
+  </section>
 <p><% end %><p>
